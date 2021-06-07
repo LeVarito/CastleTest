@@ -61,6 +61,7 @@ class MainActivity : AppCompatActivity() {
             castleManager.startSimulation()
             windowsAdapter.notifyDataSetChanged()
             updateWindowsInfoLabels()
+            showSimulationDone()
         })
 
         labelOpenWindows = findViewById(R.id.labelOpenWindows)
@@ -87,12 +88,18 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-
+    fun showSimulationDone(){
+        var alertDialogBuilder=AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle(R.string.simulation_done_dialog_title)
+        alertDialogBuilder.setMessage(R.string.simulation_done_dialog_text)
+        alertDialogBuilder.setPositiveButton(R.string.simulation_done_dialog_button, null)
+        alertDialogBuilder.show()
+    }
     fun showWinners(winners:IntArray){
         var alertDialogBuilder=AlertDialog.Builder(this)
-        alertDialogBuilder.setTitle("Winners")
+        alertDialogBuilder.setTitle(R.string.show_winners_dialog_title)
         if(winners.isEmpty()){
-            alertDialogBuilder.setMessage("No Winners")
+            alertDialogBuilder.setMessage(R.string.show_no_winners_dialog_text)
         }
         else {
             alertDialogBuilder.setMessage(winners.joinToString())
@@ -101,9 +108,9 @@ class MainActivity : AppCompatActivity() {
     }
     fun showStates(states:Array<String>){
         var alertDialogBuilder=AlertDialog.Builder(this)
-        alertDialogBuilder.setTitle("States")
+        alertDialogBuilder.setTitle(R.string.show_states_dialog_title)
         if(states.isEmpty()){
-            alertDialogBuilder.setMessage("No Winners")
+            alertDialogBuilder.setMessage(R.string.show_states_dialog_text)
         }
         else {
             alertDialogBuilder.setMessage(states.joinToString())

@@ -13,4 +13,14 @@
     <string name="right_open_windows_label">RIGHT OPEN WINDOWS:</string>
     <string name="windows_label">WINDOWS:</string>
     <string name="explanation_label">click to open(blue) or close(grey)</string>
+
+    <string name="simulation_done_dialog_text">All visitors has passed through all windows</string>
+    <string name="simulation_done_dialog_title">Done!</string>
+    <string name="simulation_done_dialog_button">See results</string>
+
+    <string name="show_no_winners_dialog_text">No Winners</string>
+    <string name="show_winners_dialog_title">Winners</string>
+
+    <string name="show_states_dialog_text">No states</string>
+    <string name="show_states_dialog_title">States</string>
 </resources>
