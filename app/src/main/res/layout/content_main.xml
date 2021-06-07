@@ -30,6 +30,11 @@
                             android:layout_height="wrap_content"
                             android:id="@+id/winnersHardModeButton"
                             android:text="@string/get_winners_easy_mode"/>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/getWindowsStateButton"
+                            android:text="@string/get_windows_state"/>
 
                         <Button
                             android:layout_width="wrap_content"

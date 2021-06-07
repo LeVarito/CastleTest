@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.res.TypedArray
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var getWinnersEasyModeButton: Button
     lateinit var getWinnersHardModeButton: Button
     lateinit var startSimulationButton: Button
+    lateinit var getWindowsStateButton: Button
     lateinit var layoutManager: LinearLayoutManager
     lateinit var labelOpenWindows: TextView
     lateinit var labelClosedWindows: TextView
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         resetWindowsButton = findViewById(R.id.resetWindowsButton)
         getWinnersEasyModeButton = findViewById(R.id.winnersEasyModeButton)
         getWinnersHardModeButton = findViewById(R.id.winnersHardModeButton)
+        getWindowsStateButton = findViewById(R.id.getWindowsStateButton)
         startSimulationButton = findViewById(R.id.startSimulationButton)
 
         resetWindowsButton.setOnClickListener(View.OnClickListener {
@@ -50,6 +53,9 @@ class MainActivity : AppCompatActivity() {
         })
         getWinnersHardModeButton.setOnClickListener(View.OnClickListener {
             showWinners(castleManager.getWinnerHardMode())
+        })
+        getWindowsStateButton.setOnClickListener(View.OnClickListener {
+            showStates(castleManager.getWindowsState())
         })
         startSimulationButton.setOnClickListener(View.OnClickListener {
             castleManager.startSimulation()
@@ -90,6 +96,17 @@ class MainActivity : AppCompatActivity() {
         }
         else {
             alertDialogBuilder.setMessage(winners.joinToString())
+        }
+        alertDialogBuilder.show()
+    }
+    fun showStates(states:Array<String>){
+        var alertDialogBuilder=AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle("States")
+        if(states.isEmpty()){
+            alertDialogBuilder.setMessage("No Winners")
+        }
+        else {
+            alertDialogBuilder.setMessage(states.joinToString())
         }
         alertDialogBuilder.show()
     }

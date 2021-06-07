@@ -5,6 +5,7 @@
     <string name="reset_windows_button">Reset Windows</string>
     <string name="get_winners_easy_mode">Get winners Easy mode</string>
     <string name="get_winners_hard_mode">Get winners Hard mode</string>
+    <string name="get_windows_state">Get windows state</string>
     <string name="start_simulation">Start Game</string>
     <string name="open_windows_label">OPEN WINDOWS:</string>
     <string name="closed_windows_label">CLOSED WINDOWS:</string>
