@@ -29,7 +29,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/winnersHardModeButton"
-                            android:text="@string/get_winners_easy_mode"/>
+                            android:text="@string/get_winners_hard_mode"/>
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
